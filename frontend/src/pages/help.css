@@ -1,0 +1,24 @@
+.help-shell {
+    min-height: 100vh;
+    padding: 48px;
+    background: linear-gradient(135deg, #2e1065, #6d28d9);
+    color: #fff
+}
+
+.faq {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px
+}
+
+summary {
+    cursor: pointer;
+    background: rgba(255, 255, 255, .07);
+    padding: 12px 14px;
+    border-radius: 12px
+}
+
+.ans {
+    padding: 12px;
+    color: #cbd5e1
+}

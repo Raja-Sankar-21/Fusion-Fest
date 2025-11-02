@@ -1,0 +1,56 @@
+.pw-wrap {
+    position: relative;
+    display: flex;
+    align-items: center
+}
+
+.pw-wrap input {
+    flex: 1
+}
+
+.toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #cbd5e1;
+    border: none;
+    cursor: pointer
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+/* Lighter, transparent login card */
+.auth-shell .card {
+    background: rgba(31, 41, 55, 0.45);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    backdrop-filter: blur(12px)
+}
+
+/* Lighter inputs for login page only */
+.auth-shell .card .form-grid input {
+    background: rgba(31, 41, 55, 0.60);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    color: #e5e7eb;
+}
+
+.auth-shell .card .form-grid input::placeholder {
+    color: rgba(229, 231, 235, 0.7)
+}
+
+.auth-shell .card .form-grid input:focus {
+    outline: none;
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.25);
+}

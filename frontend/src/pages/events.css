@@ -1,0 +1,198 @@
+.events-shell {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
+    padding: 48px;
+    color: #fff
+}
+
+/* Popular packages */
+.packages { margin-top: 16px; }
+.packages-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.packages-head .packages-controls { display:flex; align-items:center; gap:8px; }
+.packages-head .packages-controls input[type="search"],
+.packages-head .packages-controls select {
+  height: 36px;
+  background: rgba(15, 20, 40, .7);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #e5e7eb;
+  border-radius: 10px;
+  padding: 0 10px;
+  outline: none;
+}
+.packages-head .packages-controls input::placeholder { color:#94a3b8; }
+.packages-head .packages-controls select { cursor: pointer; }
+.packages-row { position:relative; display:flex; gap:12px; overflow-x:auto; padding:0 40px 8px; scroll-behavior:smooth; }
+.packages-row::-webkit-scrollbar { display:none; }
+.pkg-card { flex:0 0 auto; width:240px; background: rgba(15, 20, 40, .7); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:12px; }
+.pkg-media { height:120px; border-radius:10px; background-size:cover; background-position:center; margin-bottom:8px; }
+.pkg-title { font-weight:700; }
+.pkg-desc { color:#cbd5e1; font-size:13px; margin-top:4px; }
+.pkg-foot { display:flex; align-items:center; justify-content:space-between; margin-top:8px; }
+.pkg-price { font-weight: 700; }
+.heart { background:transparent; border:0; cursor:pointer; font-size:20px; line-height:1; }
+
+.pkg-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .8;
+  text-shadow: 0 2px 10px rgba(0,0,0,.6);
+}
+.pkg-nav.left { left: 6px; }
+.pkg-nav.right { right: 6px; }
+.pkg-nav:hover { opacity: 1; }
+.pkg-nav.hidden { opacity: 0; pointer-events: none; }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  background: rgba(17, 24, 39, .95);
+  border: 1px solid rgba(255,255,255,.1);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+  z-index: 60;
+}
+
+.events-shell h1 {
+    font-size: 44px;
+    margin: 0 0 6px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px
+}
+
+.tile {
+    background: rgba(15, 20, 40, .7);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    padding: 18px;
+    transition: .2s
+}
+
+.tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25)
+}
+
+.icon {
+    font-size: 28px
+}
+
+.title {
+    font-weight: 700;
+    margin-top: 8px
+}
+
+.desc {
+    color: #cbd5e1;
+    margin-top: 6px
+}
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:600px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.modal {
+  background: rgba(11, 11, 20, .95);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  color: #fff;
+  max-width: 960px;
+  width: 100%;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  color: #94a3b8;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Booking form tweaks inside modal */
+.booking-form h2 { margin: 0 0 6px; }
+.booking-form .form-grid.two { grid-template-columns: 1fr 1fr; }
+@media(max-width:700px){
+  .booking-form .form-grid.two { grid-template-columns: 1fr; }
+}
+
+/* Corporate vendor selection */
+.corporate-vendors h2 { margin: 0 0 6px; }
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+@media(max-width:700px){
+  .vendor-grid { grid-template-columns: 1fr; }
+}
+
+.vendor-card {
+  background: rgba(15, 20, 40, .7);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.vendor-title { font-weight: 700; }
+.vendor-desc { color: #cbd5e1; margin-top: 4px; }
+.vendor-media { height: 110px; background: radial-gradient(120px 60px at 40% 50%, #6d28d9, transparent), radial-gradient(120px 60px at 70% 50%, #22d3ee, transparent); border-radius: 10px; margin: 10px 0; }
+.vendor-actions { display:flex; gap: 10px; justify-content: flex-end; }
+
+/* Normalize button sizes inside modal */
+.modal .primary,
+.modal .ghost {
+  height: 40px;
+  min-width: 120px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
